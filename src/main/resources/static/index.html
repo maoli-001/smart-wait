@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>智能候诊系统</title>
+    <style>
+        body { font-family: "Microsoft YaHei", sans-serif; margin: 40px auto; max-width: 760px; color: #1F2329; }
+        h1 { color: #1F2329; }
+        code { background: #F5F7FA; padding: 2px 6px; border-radius: 4px; }
+        li { line-height: 1.8; }
+    </style>
+</head>
+<body>
+<h1>智能候诊系统</h1>
+<p>前端交互层由成员3负责实现，本页为骨架占位页。后端接口已就绪，见下方清单。</p>
+
+<h2>接口速览（详情见《需求规格说明书》第五章）</h2>
+<ul>
+    <li>POST <code>/api/auth/login</code> 登录（role: PATIENT/DOCTOR/ADMIN）</li>
+    <li>POST <code>/api/checkin</code> 扫码签到 | DELETE <code>/api/checkin/{queueNo}</code> 取消签到</li>
+    <li>GET <code>/api/waiting/{queueNo}</code> 查询排队位置 | GET <code>/api/board/status?deptId=1</code> 候诊大屏</li>
+    <li>POST <code>/api/queue/call</code> 叫号 | POST <code>/api/queue/reorder</code> 过号重排</li>
+    <li>POST <code>/api/visit/start</code> 开始接诊 | POST <code>/api/visit/end</code> 结束接诊</li>
+    <li>POST <code>/api/visit/{visitId}/diagnosis</code> 诊断 | <code>/prescription</code> 医嘱</li>
+    <li>GET/POST/PUT/DELETE <code>/api/depts</code>、<code>/api/doctors</code>、<code>/api/schedules</code> 管理维护</li>
+</ul>
+<p>演示账号：管理员 admin/admin123；医生 zhang/123；患者 zhang3/123（见 DataInitializer）。</p>
+</body>
+</html>
